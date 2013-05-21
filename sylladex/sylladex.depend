@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1369170847 source:c:\users\saphira bjartskular\documents\github\sylladex\sylladex\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	<limits>
+
