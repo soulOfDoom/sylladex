@@ -7,9 +7,15 @@
 //
 
 #include <iostream>
+<<<<<<< HEAD
 #include <fstream>
 #include <string>
 
+=======
+#include <ctime>
+#include <cstdlib>
+#include <limits>
+>>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
 void menu();
 void captchalogue();
 void clearScreen();
@@ -52,12 +58,16 @@ std::string saveName;
 std::string loadName;
 
 int main(){
+<<<<<<< HEAD
     
     clearScreen();
     
     std::cout << "How many cards?: ";
     std::cin >> cardNuber;
     
+=======
+
+>>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
     menu();
 }
 
@@ -66,23 +76,30 @@ void pressEnter(){
     std::cin.ignore();
     std::cout << "\nPress ENTER to Continue";
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-    std::cin.clear();
 }
 
 
 void clearScreen() {
 #ifdef _WIN32
     std::system ( "CLS" );
-    
+
 #else
     // Assume POSIX
     std::system ( "clear" );
 #endif
 }
 
+<<<<<<< HEAD
+=======
+void stop(){
+
+}
+
+>>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
 void menu(){
-    
+
     clearScreen();
+<<<<<<< HEAD
     
     int doMenu;
         
@@ -91,6 +108,15 @@ void menu(){
     clearScreen();
 
     std::cout << "______________________\n"
+=======
+
+    int doThing;
+
+    std::cout << "\n\n\n\n\n\nEnter the number that corrisponds to the menu entry that you want!\n\n";
+
+    //get user inputs
+    std::cout << " ____________________\n"
+>>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
                  "|                    |\n"
                  "| 1 - Captchalogue   |\n"
                  "| 2 - Sylladex       |\n"
@@ -98,10 +124,16 @@ void menu(){
                  "| 4 - Exit           |\n"
                  "|____________________|\n";
     std::cout << "\nSelection: ";
+<<<<<<< HEAD
     std::cin >> doMenu;
     std::cin.clear();
     
     switch (doMenu) {
+=======
+    std::cin >> doThing;
+    std::cin.ignore();
+    switch (doThing) {
+>>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
         case (1):
             captchalogue();
         case (2):
@@ -114,12 +146,12 @@ void menu(){
 }
 
 void captchalogue(){
-    
+
     clearScreen();
-    
+
     int doCaptchalogue;
-        
-    std::cout << "_____________________\n"
+
+    std::cout << " ___________________\n"
                  "|                   |\n"
                  "| 1 - Get Item      |\n"
                  "| 2 - Drop          |\n"
@@ -127,8 +159,12 @@ void captchalogue(){
                  "|___________________|\n";
     std::cout << "\nSelection: ";
     std::cin >> doCaptchalogue;
+<<<<<<< HEAD
     std::cin.clear();
     
+=======
+    std::cin.ignore();
+>>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
     switch (doCaptchalogue) {
         case (1):
             getItem();
@@ -211,10 +247,11 @@ void addSubCards() {
 }
 
 void getItem(){
-    
+
     clearScreen();
-    
+
     std::cout << "Item name: ";
+<<<<<<< HEAD
     std::cin >> itemName;
     std::cin.clear();
     std::cout << "Item number: ";
@@ -227,22 +264,32 @@ void getItem(){
         item0 = itemName;
     }
     
+=======
+    std::cin.getline(itemName,100);
+    std::cin.ignore();
+    std::cout << "Item number: ";
+    std::cin >> itemNumber;
+    std::cin.ignore();
+
+
+
+>>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
     if (itemNumber == 1) {
         item1 = itemName;
     }
-    
+
     if (itemNumber == 2) {
         item2 = itemName;
     }
-    
+
     if (itemNumber == 3) {
         item3 = itemName;
     }
-    
+
     if (itemNumber == 4) {
         item4 = itemName;
     }
-    
+
     if (itemNumber == 5) {
         item5 = itemName;
     }
@@ -302,10 +349,14 @@ void getItem(){
     if (itemNumber == 19) {
         item19 = itemName;
     }
-    
+    else {
+      std::cout << "You can only carry 5 items!";
+      pressEnter();
+    }
     menu();
 }
 
+<<<<<<< HEAD
 void captchalogued(){
     
     clearScreen();
@@ -390,22 +441,45 @@ void captchalogued(){
         std::cout << "\n19 - " << item19;
     }
     
+=======
+void sylladex(){
+
+    clearScreen();
+
+    std::cout << "1 - " << itemOne[100] <<
+                 "\n2 - " << itemTwo[100] <<
+                 "\n3 - " << itemThree[100] <<
+                 "\n4 - " << itemFour[100] <<
+                 "\n5 - " << itemFive[100];
+
+>>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
     pressEnter();
     menu();
 }
 
+<<<<<<< HEAD
 void drop(){
     
+=======
+void dropUse(){
+
+>>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
     clearScreen();
-    
+
     int dropUseNumber;
-    
+
     std::cout << "Item number: ";
     std::cin >> dropUseNumber;
-    std::cin.clear();
-    
+    std::cin.ignore();
+
     clearScreen();
+<<<<<<< HEAD
     
+=======
+
+    std::cout << "\nyou drop the " << itemName << " on the ground.\n";
+
+>>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
     switch (dropUseNumber) {
         case (1):
             std::cout << "\nyou drop the " << item0 << " on the ground.\n";
@@ -448,6 +522,7 @@ void drop(){
         case (20):
             std::cout << "\nyou drop the " << item19 << " on the ground.\n";
     }
+<<<<<<< HEAD
     
     menu();
     
@@ -559,3 +634,8 @@ void load() {
     load.close();
     
 }
+=======
+
+    pressEnter();
+}
+>>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
