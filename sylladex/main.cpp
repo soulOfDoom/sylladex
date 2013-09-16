@@ -7,15 +7,9 @@
 //
 
 #include <iostream>
-<<<<<<< HEAD
 #include <fstream>
 #include <string>
 
-=======
-#include <ctime>
-#include <cstdlib>
-#include <limits>
->>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
 void menu();
 void captchalogue();
 void clearScreen();
@@ -58,16 +52,12 @@ std::string saveName;
 std::string loadName;
 
 int main(){
-<<<<<<< HEAD
     
     clearScreen();
     
     std::cout << "How many cards?: ";
     std::cin >> cardNuber;
     
-=======
-
->>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
     menu();
 }
 
@@ -76,64 +66,42 @@ void pressEnter(){
     std::cin.ignore();
     std::cout << "\nPress ENTER to Continue";
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    std::cin.clear();
 }
 
 
 void clearScreen() {
 #ifdef _WIN32
     std::system ( "CLS" );
-
+    
 #else
     // Assume POSIX
     std::system ( "clear" );
 #endif
 }
 
-<<<<<<< HEAD
-=======
-void stop(){
-
-}
-
->>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
 void menu(){
-
+    
     clearScreen();
-<<<<<<< HEAD
     
     int doMenu;
-        
+    
     //get user inputs
     
     clearScreen();
-
+    
     std::cout << "______________________\n"
-=======
-
-    int doThing;
-
-    std::cout << "\n\n\n\n\n\nEnter the number that corrisponds to the menu entry that you want!\n\n";
-
-    //get user inputs
-    std::cout << " ____________________\n"
->>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
-                 "|                    |\n"
-                 "| 1 - Captchalogue   |\n"
-                 "| 2 - Sylladex       |\n"
-                 "| 3 - Save/Load      |\n"
-                 "| 4 - Exit           |\n"
-                 "|____________________|\n";
+    "|                    |\n"
+    "| 1 - Captchalogue   |\n"
+    "| 2 - Sylladex       |\n"
+    "| 3 - Save/Load      |\n"
+    "| 4 - Exit           |\n"
+    "|____________________|\n";
     std::cout << "\nSelection: ";
-<<<<<<< HEAD
     std::cin >> doMenu;
     std::cin.clear();
     
     switch (doMenu) {
-=======
-    std::cin >> doThing;
-    std::cin.ignore();
-    switch (doThing) {
->>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
         case (1):
             captchalogue();
         case (2):
@@ -142,29 +110,25 @@ void menu(){
             saveLoad();
         case (4):
             exit(0);
-        }
+    }
 }
 
 void captchalogue(){
-
+    
     clearScreen();
-
+    
     int doCaptchalogue;
-
-    std::cout << " ___________________\n"
-                 "|                   |\n"
-                 "| 1 - Get Item      |\n"
-                 "| 2 - Drop          |\n"
-                 "| 3 - Back          |\n"
-                 "|___________________|\n";
+    
+    std::cout << "_____________________\n"
+    "|                   |\n"
+    "| 1 - Get Item      |\n"
+    "| 2 - Drop          |\n"
+    "| 3 - Back          |\n"
+    "|___________________|\n";
     std::cout << "\nSelection: ";
     std::cin >> doCaptchalogue;
-<<<<<<< HEAD
     std::cin.clear();
     
-=======
-    std::cin.ignore();
->>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
     switch (doCaptchalogue) {
         case (1):
             getItem();
@@ -182,11 +146,11 @@ void sylladex(){
     int doSylladex;
     
     std::cout << "__________________________\n"
-                 "|                        |\n"
-                 "| 1 - Captchalogued      |\n"
-                 "| 2 - Add/Subtract Cards |\n"
-                 "| 3 - Back               |\n"
-                 "|________________________|\n";
+    "|                        |\n"
+    "| 1 - Captchalogued      |\n"
+    "| 2 - Add/Subtract Cards |\n"
+    "| 3 - Back               |\n"
+    "|________________________|\n";
     std::cout << "\nSelection: ";
     std::cin >> doSylladex;
     std::cin.clear();
@@ -212,11 +176,11 @@ void addSubCards() {
     int tempCards;
     
     std::cout << "_____________________\n"
-                 "|                   |\n"
-                 "| 1 - Add           |\n"
-                 "| 2 - Subtract      |\n"
-                 "| 3 - Back          |\n"
-                 "|___________________|\n";
+    "|                   |\n"
+    "| 1 - Add           |\n"
+    "| 2 - Subtract      |\n"
+    "| 3 - Back          |\n"
+    "|___________________|\n";
     std::cout << "\nSelection: ";
     std::cin >> doAddSub;
     
@@ -247,11 +211,10 @@ void addSubCards() {
 }
 
 void getItem(){
-
+    
     clearScreen();
-
+    
     std::cout << "Item name: ";
-<<<<<<< HEAD
     std::cin >> itemName;
     std::cin.clear();
     std::cout << "Item number: ";
@@ -264,32 +227,22 @@ void getItem(){
         item0 = itemName;
     }
     
-=======
-    std::cin.getline(itemName,100);
-    std::cin.ignore();
-    std::cout << "Item number: ";
-    std::cin >> itemNumber;
-    std::cin.ignore();
-
-
-
->>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
     if (itemNumber == 1) {
         item1 = itemName;
     }
-
+    
     if (itemNumber == 2) {
         item2 = itemName;
     }
-
+    
     if (itemNumber == 3) {
         item3 = itemName;
     }
-
+    
     if (itemNumber == 4) {
         item4 = itemName;
     }
-
+    
     if (itemNumber == 5) {
         item5 = itemName;
     }
@@ -349,14 +302,10 @@ void getItem(){
     if (itemNumber == 19) {
         item19 = itemName;
     }
-    else {
-      std::cout << "You can only carry 5 items!";
-      pressEnter();
-    }
+    
     menu();
 }
 
-<<<<<<< HEAD
 void captchalogued(){
     
     clearScreen();
@@ -441,45 +390,22 @@ void captchalogued(){
         std::cout << "\n19 - " << item19;
     }
     
-=======
-void sylladex(){
-
-    clearScreen();
-
-    std::cout << "1 - " << itemOne[100] <<
-                 "\n2 - " << itemTwo[100] <<
-                 "\n3 - " << itemThree[100] <<
-                 "\n4 - " << itemFour[100] <<
-                 "\n5 - " << itemFive[100];
-
->>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
     pressEnter();
     menu();
 }
 
-<<<<<<< HEAD
 void drop(){
     
-=======
-void dropUse(){
-
->>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
     clearScreen();
-
+    
     int dropUseNumber;
-
+    
     std::cout << "Item number: ";
     std::cin >> dropUseNumber;
-    std::cin.ignore();
-
-    clearScreen();
-<<<<<<< HEAD
+    std::cin.clear();
     
-=======
-
-    std::cout << "\nyou drop the " << itemName << " on the ground.\n";
-
->>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
+    clearScreen();
+    
     switch (dropUseNumber) {
         case (1):
             std::cout << "\nyou drop the " << item0 << " on the ground.\n";
@@ -522,7 +448,6 @@ void dropUse(){
         case (20):
             std::cout << "\nyou drop the " << item19 << " on the ground.\n";
     }
-<<<<<<< HEAD
     
     menu();
     
@@ -533,11 +458,11 @@ void saveLoad() {
     int doSaveLoad;
     
     std::cout << "_____________________\n"
-                 "|                   |\n"
-                 "| 1 - Save          |\n"
-                 "| 2 - Load          |\n"
-                 "| 3 - Back          |\n"
-                 "|___________________|\n";
+    "|                   |\n"
+    "| 1 - Save          |\n"
+    "| 2 - Load          |\n"
+    "| 3 - Back          |\n"
+    "|___________________|\n";
     std::cout << "\nSelection: ";
     std::cin >> doSaveLoad;
     std::cin.clear();
@@ -563,25 +488,25 @@ void save() {
     save.open (saveName);
     
     save << item0 << "\n"
-         << item1 << "\n"
-         << item2 << "\n"
-         << item3 << "\n"
-         << item4 << "\n"
-         << item5 << "\n"
-         << item6 << "\n"
-         << item7 << "\n"
-         << item8 << "\n"
-         << item9<< "\n"
-         << item10 << "\n"
-         << item11 << "\n"
-         << item12 << "\n"
-         << item13 << "\n"
-         << item14 << "\n"
-         << item15 << "\n"
-         << item16 << "\n"
-         << item17 << "\n"
-         << item18 << "\n"
-         << item19<< "\n";
+    << item1 << "\n"
+    << item2 << "\n"
+    << item3 << "\n"
+    << item4 << "\n"
+    << item5 << "\n"
+    << item6 << "\n"
+    << item7 << "\n"
+    << item8 << "\n"
+    << item9<< "\n"
+    << item10 << "\n"
+    << item11 << "\n"
+    << item12 << "\n"
+    << item13 << "\n"
+    << item14 << "\n"
+    << item15 << "\n"
+    << item16 << "\n"
+    << item17 << "\n"
+    << item18 << "\n"
+    << item19<< "\n";
     
     save.close();
     
@@ -634,8 +559,3 @@ void load() {
     load.close();
     
 }
-=======
-
-    pressEnter();
-}
->>>>>>> eb8a863b887769e9e6ff4bc608de0beb280201da
